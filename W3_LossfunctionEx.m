@@ -11,7 +11,7 @@ Q4 = CE(output, target)
 function classError = ClassE(output, target) 
     [maxX, idx] = max(output,[],2);
     [maxT, ids] = max(target,[],2);
-    out = idx == ids;
+    out = idx ~= ids;
     classError = mean(out);
 end
 
