@@ -40,14 +40,10 @@ best_pca = pca_obj(inx); %take the value using the index for the best pca
 pca_Train = X_Train*coeff;
 pca_Test = CatDog_test_reshape*coeff;
 
-%Test_time_LRC = [];%comment out if you have the baseline result from lrcCatdogbase.m
-tStart = tic;
 [B,dev,stats] = mnrfit(pca_Train, y_Train); %train the best NBC
-tEnd = toc(tStart);
-Test_time_LRC = [Test_time_LRC, tEnd]
 
 %Accuracy_Test_LRC =[];%comment out if you have the baseline result from lrcCatdogbase.m
 pred_Test = mnrval(B, pca_Test); %test
 [m, inx] = max(pred_Test, [], 2);
 Result = sum(inx == CatDog_test_targets)/numel(CatDog_test_targets);
-Accuracy_Test_LRC = [Accuracy_Test_LRC, Result]
+Accuracy_Test_LRC = [Accuracy_Test_LRC, Result];

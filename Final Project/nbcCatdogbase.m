@@ -50,7 +50,7 @@ Tconcatenation = [T Tnew_Val];
 
 %and confirm the ML Model works well on validation set prior to test-stage
 h = heatmap(Tconcatenation,'y_Validation','Ynew_Val');
-h.Title = 'Naive Bayes Classification(NBC) on the Validation Sub-dataset(CatDog)';
+h.Title = 'NBC on the Validation CatDog Sub-dataset';
 h.XLabel = 'Target Label';
 h.YLabel = 'NBC Prediction';
 %% Run the Initial NBC Model on the Test CatDog Sub-Dataset

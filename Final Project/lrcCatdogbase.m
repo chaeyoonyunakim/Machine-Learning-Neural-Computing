@@ -13,13 +13,13 @@ pred_Train = mnrval(B, X_Train);
 Accuracy_Train_LRC = [];
 Result = sum(inx == y_Train)/numel(y_Train);
 Accuracy_Train_LRC = [Result]; %store training accuracy in a list
-%% Run the LRC Model on the Validation CatDog Sub-Dataset
+%% Run the LRC Model on the Validation CatDog Sub-Dataset(Syntactic error)
 pred_Val = mnrval(B, X_Validation);
 [m, inx] = max(pred_Val, [], 2);
 Accuracy_Val_LRC = [];
 Result = sum(inx == y_Validation)/numel(y_Validation);
-Accuracy_Val_LRC = [Result] %store validation accuracy in a list
-%% Visualize the Classification Accuracy of the LRC Model Prediction
+Accuracy_Val_LRC = [Result]; %store validation accuracy in a list
+%% Visualize the Classification Accuracy of the LRC Model Prediction(Syntactic error)
 T = array2table(y_Validation);
 Tnew_Val = array2table(pred_Val);
 Tconcatenation = [T Tnew_Val];
