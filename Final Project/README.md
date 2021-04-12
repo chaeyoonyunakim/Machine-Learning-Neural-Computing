@@ -10,7 +10,8 @@
 
 # INM427-Neural Computing Final Project
 
-- Setup_instructions
+- Anaconda Environment Setup command line using .yaml; conda env create --file yaml_file.yaml
+- Alternatively, following steps is also available for creating the same conda environment as .yaml
 
 1. Open the Windows PowerShell
 2. Move to the directory where requirements file are placed
